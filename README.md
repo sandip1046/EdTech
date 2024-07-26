@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# EdTech
+## Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This EdTech project is designed to provide a seamless online learning experience by leveraging modern technologies like React and Tailwind CSS for a responsive front-end, Firebase for a robust back-end, and integrated payment solutions with PayPal and Stripe. It also includes structured authentication and comprehensive analytics setup to enhance user security and track engagement.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Front-end development using React and Tailwind CSS
+- Back-end development with Firebase
+- Payment integration with PayPal and Stripe
+- Structured data for authentication
+- Analytics setup
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Firebase**: A platform developed by Google for creating mobile and web applications.
+- **PayPal**: An online payment system that supports online money transfers.
+- **Stripe**: An online payment processing platform.
+- **Analytics**: Tools and libraries for setting up analytics.
+
+## Setup
+
+### Prerequisites
+
+Make sure you have the following installed on your system:
+
+- Node.js
+- npm (Node Package Manager)
+- Firebase CLI
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
