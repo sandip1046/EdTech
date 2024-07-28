@@ -16,20 +16,20 @@ export const PaymentCards = () => {
         <div className={"font-bold text-4xl tracking-wider mb-5 mt-5 "}>Payment</div>
         <div className="flex flex-col items-center   bg-slate-100 rounded-md  w-8/12 sm:w-10/12 md:w-4/12  h-90 	border-slate-950 	shadow-2xl	mb-5 ">
 
-          <div className="flex flex-col items-center justify-center  bg-slate-300 rounded-sm w-10/12	 h-100 	border-slate-950  m-5	p-2	sm:flex-row">
+          <div className="flex flex-col items-center justify-center  bg-slate-300 rounded-sm w-10/12	 h-100 	border-slate-950  m-5	p-2	lg:flex-row">
 
 
             <img src="/PAYPAL.png" alt="Hero Image" className={"	mr-2 h-10	"} />
-            <div className={"font-semibold"}>Pay with PayPal</div>
+            <div className={"font-semibold m-1"}>Pay with PayPal</div>
           
             <PayPalButton />
           </div>
 
 
-          <div className="flex flex-col items-center justify-center  bg-slate-300 rounded-sm w-10/12	 h-100 	border-slate-950  m-5	p-2	md:flex-row">
+          <div className="flex flex-col items-center justify-center  bg-slate-300 rounded-sm w-10/12	 h-100 	border-slate-950  m-5	p-2	lg:flex-row">
             <img src="/STRIPE.png" alt="Hero Image" className={"	mr-2 h-10	"} />
-            <div className={"font-semibold"}>Pay with Stripe</div>
-            <button className="rounded-md border-black bg-black border-1 text-white 		mx-5 p-2 h-10	w-2/12 hover:bg-gray-800">Pay</button>
+            <div className={"font-semibold m-1"}>Pay with Stripe</div>
+            <button className="rounded-md border-black bg-black border-1 text-white 		mx-2 p-2 h-10	w-3/12 hover:bg-gray-800 xl:mx-3 xl:w-2/12">Pay</button>
 
           </div>
 
@@ -90,7 +90,7 @@ export const CoursePrice = () => {
     <div >
       <h2 className="flex justify-center items-center m-1 font-semibold text-lg">Course Price: ${price.toFixed(2)}</h2>
       <div className="flex flex-col justify-center items-center ">
-        <input className="mb-2 p-2  sm:p-2 sm:m-5"
+        <input className="my-2 p-2 w-11/12  sm:p-2  "
           type="text"
           placeholder="Enter coupon code"
           value={userCoupon}

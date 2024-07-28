@@ -55,7 +55,7 @@ export const PayPalButton =() =>{
   }, []); //empty dependency means it will chancge in each mount
       return (
         <>
-          <button onClick={handlePayment} className={"flex justify-center items-center rounded-md border-black bg-black border-1 text-white 		mx-5 p-2 h-10	w-2/12 hover:bg-gray-800"}>Pay</button>
+          <button onClick={handlePayment} className={"flex justify-center items-center rounded-md border-black bg-black border-1 text-white 		mx-5 p-2 h-10	w-2/12 hover:bg-gray-800 xl:mx-3 xl:w-2/12"}>Pay</button>
         </>
       );
     }
