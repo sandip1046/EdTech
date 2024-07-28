@@ -14,7 +14,7 @@ export const PayPalButton =() =>{
         e.preventDefault();
     
         try {
-          const res = await axios.get('https://pay-pal-server-34pk1pthm-sandip-kumar-yadavs-projects.vercel.app/payment');
+          const res = await axios.get('https://vercel.com/sandip-kumar-yadavs-projects/pay-pal-server/payment');
     
           if (res && res.data) {
             window.location.href = res.data.links[1].href;
@@ -34,7 +34,7 @@ export const PayPalButton =() =>{
           const paymentId = urlParams.get('paymentId');
 
           if (payerId && paymentId) {
-              const res = await axios.get(`https://pay-pal-server-34pk1pthm-sandip-kumar-yadavs-projects.vercel.app/?PayerID=${payerId}&paymentId=${paymentId}`);
+              const res = await axios.get(`https://vercel.com/sandip-kumar-yadavs-projects/pay-pal-server/?PayerID=${payerId}&paymentId=${paymentId}`);
 
               if (res && res.data.success) {
                   alert("Payment successful!");

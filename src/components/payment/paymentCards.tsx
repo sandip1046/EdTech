@@ -72,7 +72,7 @@ export const CoursePrice = () => {
   const initiatePayment = async () => {
     try {
 
-      const response = await fetch('https://pay-pal-server-34pk1pthm-sandip-kumar-yadavs-projects.vercel.app/paymentCoupon', {
+      const response = await fetch('https://vercel.com/sandip-kumar-yadavs-projects/pay-pal-server/paymentCoupon', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
