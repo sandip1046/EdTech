@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import { analytics } from './firebaseAuth';
 import { logEvent } from 'firebase/analytics';
 import ProtectedRoute from './protectedRoutes';
+import PayPalButton from './components/payment/payPalButton';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
           />
       <Route path="/payment" element={<Payment />} />
       <Route path="/fullstack" element={<Fullstack />} />
+      <Route path="/paypal" element={<PayPalButton />} />
+      
      </Routes>
      
      </BrowserRouter>

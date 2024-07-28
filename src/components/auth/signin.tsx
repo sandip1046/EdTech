@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // this is a Signin component
 import { ChangeEvent, useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import z from "zod";
-import { auth } from "../../firebaseAuth";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth,provider } from "../../firebaseAuth";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 const signinInput = z.object({
     email: z.string().email(),
@@ -38,7 +39,17 @@ export const Authsignin = () => {
         })
     }
 
-    return <div className="flex items-center  justify-center h-screen m-0">
+        
+        const googleSigin =()=>{
+            signInWithPopup(auth,provider).then((data: any)=>{
+                localStorage.setItem("email",data.user.email)
+                navigate('/courses')
+            })
+        }
+    
+        
+
+    return <div className="flex items-center  justify-center h-screen m-0 ">
 
         <div className="flex flex-col items-center  justify-center rounded-md border-slate-300  bg-slate-100 border-2 m-0 p-7 w-fit  shadow-2xl">
             {/* heading div */}
@@ -73,8 +84,11 @@ export const Authsignin = () => {
             } />
 
            
+            
             <button onClick={sendRequest}  className="rounded-md border-black bg-black border-1 text-white	mt-5 p-2 h-full	w-full hover:bg-gray-800	">Sign in</button>
-
+           
+            <button onClick={googleSigin}  className=" flex flex-row justify-center items-center rounded-md border-black bg-white border-1 font-medium text-black	mt-5 p-2 h-full	w-full hover:bg-gray-50	">Sign in with <img src="/googlew.jpg" alt="Hero Image" className={"	mx-1 h-10	"} /></button>
+            
 
 
         </div>
