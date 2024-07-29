@@ -1,16 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
-import { Route } from 'react-router-dom';
+import { ReactNode } from 'react';
 
-interface ProtectedRouteFullstackProps {
-    path: string;
-    element: React.ReactElement;
-  }
-
-const ProtectedRouteFullstack: React.FC<ProtectedRouteFullstackProps> = ({
-    path,
-    element,
-}) => {
+interface ProtectedRouteProps {
+    children: ReactNode;
+  } 
+const ProtectedRouteFullstack:  React.FC<ProtectedRouteProps> = ({ children }) => {
 
     const hasCompletedPurchase = async (): Promise<boolean> => {
         const response = await axios.get('/api/paypal/payment-status');
@@ -21,7 +16,7 @@ const ProtectedRouteFullstack: React.FC<ProtectedRouteFullstackProps> = ({
     window.location.href = 'https://sandip-ed-tech.vercel.app/payment';
   }
 
-  return <Route path={path} element={element} />;
+  return <>{children}</>;
 };
 
 export default ProtectedRouteFullstack;

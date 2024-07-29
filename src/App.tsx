@@ -4,13 +4,13 @@ import { Login } from "./page/Login";
 import { Landing } from './page/landing';
 import { Courses } from './page/courses';
 import { Payment } from './page/payment';
-import Fullstack from './page/fullstack';
 import { useEffect } from 'react';
 import { analytics } from './firebaseAuth';
 import { logEvent } from 'firebase/analytics';
 import ProtectedRoute from './protectedRoutes';
 import PayPalButton from './components/payment/payPalButton';
 import ProtectedRouteFullstack from './protectedfullstackroute';
+import Fullstack from './page/fullstack';
 
 
 function App() {
@@ -36,10 +36,14 @@ function App() {
             }
           />
       <Route path="/payment" element={<Payment />} />
-      <Routes>
-        <Route path="/payment" element={<Payment />} />
-        <ProtectedRouteFullstack path="/fullstack" element={<Fullstack />} />
-      </Routes>
+      <Route
+            path="/payment"
+            element={
+              <ProtectedRouteFullstack>
+                <Fullstack />
+              </ProtectedRouteFullstack>
+            }
+          />
       <Route path="/paypal" element={<PayPalButton />} />
       
      </Routes>
