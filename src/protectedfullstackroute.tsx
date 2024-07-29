@@ -1,15 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+// this protected route is added so that the user can only access /fullstack poge only if he is signined and purchased the course
 import axios from 'axios';
 import { ReactNode } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebaseAuth';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 interface ProtectedRouteProps {
     children: ReactNode;
 }
 const ProtectedRouteFullstack: React.FC<ProtectedRouteProps> = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
+    const location = useLocation();
 
     const hasCompletedPurchase = async (): Promise<boolean> => {
         const response = await axios.get('/api/paypal/payment-status');
