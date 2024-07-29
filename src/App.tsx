@@ -37,7 +37,7 @@ function App() {
           />
       <Route path="/payment" element={<Payment />} />
       <Route
-            path="/payment"
+            path="/fullstack"
             element={
               <ProtectedRouteFullstack>
                 <Fullstack />
