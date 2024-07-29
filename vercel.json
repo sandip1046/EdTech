@@ -3,6 +3,26 @@
       {
         "source": "/fullstack",
         "destination": "/index.html"
+      },
+      {
+        "source": "/courses",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/payment",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/signin",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/signup",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/paypal",
+        "destination": "/index.html"
       }
     ]
   }
