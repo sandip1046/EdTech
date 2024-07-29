@@ -15,7 +15,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
 
 //   if it is loading then it will show Loading...
   if (loading) {
-    return <div className={"flex justify-center items-center font-extrabold text-4xl "}>Loading...</div>;
+    return <div className={"flex justify-center items-center font-extrabold text-4xl m-10"}>Loading...</div>;
   }
 
   if (error) {

@@ -10,6 +10,7 @@ import { analytics } from './firebaseAuth';
 import { logEvent } from 'firebase/analytics';
 import ProtectedRoute from './protectedRoutes';
 import PayPalButton from './components/payment/payPalButton';
+import ProtectedRouteFullstack from './protectedfullstackroute';
 
 
 function App() {
@@ -35,7 +36,10 @@ function App() {
             }
           />
       <Route path="/payment" element={<Payment />} />
-      <Route path="/fullstack" element={<Fullstack />} />
+      <Routes>
+        <Route path="/payment" element={<Payment />} />
+        <ProtectedRouteFullstack path="/fullstack" element={<Fullstack />} />
+      </Routes>
       <Route path="/paypal" element={<PayPalButton />} />
       
      </Routes>
