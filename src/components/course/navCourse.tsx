@@ -16,7 +16,7 @@ export const NavCourse = () => {
           href="https://sandip-ed-tech.vercel.app/fullstack"
           target="_blank"
           rel="noopener noreferrer"
-          className={"flex justify-center flex-col font-bold text-2xl m-0.5 tracking-wider hover:text-slate-500"}
+          className={"flex justify-center flex-col font-bold text-xl m-0.5 tracking-wider hover:text-slate-500 "}
         >
           Full Stack
         </a>
